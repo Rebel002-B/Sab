@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Los Noobinis - FOR SALE | Ultra Rare Brainrot</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', 'Inter', -apple-system, sans-serif;
+            background: linear-gradient(135deg, #1a0b2e 0%, #2d1b4e 50%, #1a0b2e 100%);
+            color: #fff;
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 50%, rgba(138, 43, 226, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 80%, rgba(255, 215, 0, 0.05) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .dots {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.3;
+            background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, rgba(138, 43, 226, 0.2) 0%, rgba(75, 0, 130, 0.3) 100%);
+            border-radius: 24px;
+            padding: 40px;
+            text-align: center;
+            margin: 40px 0;
+            box-shadow: 0 20px 60px rgba(138, 43, 226, 0.4),
+                        0 0 0 1px rgba(255, 215, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+            animation: glow-pulse 3s ease-in-out infinite;
+        }
+
+        @keyframes glow-pulse {
+            0%, 100% { box-shadow: 0 20px 60px rgba(138, 43, 226, 0.4), 0 0 0 1px rgba(255, 215, 0, 0.2); }
+            50% { box-shadow: 0 20px 80px rgba(138, 43, 226, 0.6), 0 0 0 2px rgba(255, 215, 0, 0.4); }
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent 30%, rgba(255, 215, 0, 0.1) 50%, transparent 70%);
+            animation: shine 4s ease-in-out infinite;
+        }
+
+        @keyframes shine {
+            0% { transform: rotate(0deg) translate(-50%, -50%); }
+            100% { transform: rotate(360deg) translate(-50%, -50%); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+            text-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+        }
+
+        .badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #FF1493 0%, #8B008B 100%);
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1rem;
+            letter-spacing: 2px;
+            margin: 20px 0;
+            box-shadow: 0 8px 20px rgba(255, 20, 147, 0.4);
+            animation: badge-glow 2s ease-in-out infinite;
+        }
+
+        @keyframes badge-glow {
+            0%, 100% { box-shadow: 0 8px 20px rgba(255, 20, 147, 0.4); }
+            50% { box-shadow: 0 8px 30px rgba(255, 20, 147, 0.7); }
+        }
+
+        .hero-image {
+            max-width: 400px;
+            width: 100%;
+            height: auto;
+            margin: 30px auto;
+            border-radius: 16px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease;
+        }
+
+        .hero-image:hover {
+            transform: scale(1.05);
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            color: #00FFFF;
+            font-weight: 600;
+            margin-top: 20px;
+        }
+
+        .value-panel {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px 0;
+            text-align: center;
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .value-panel h2 {
+            font-size: 2.5rem;
+            color: #FFD700;
+            margin-bottom: 15px;
+            font-weight: 800;
+        }
+
+        .value-panel p {
+            font-size: 1.1rem;
+            color: #00FFFF;
+            opacity: 0.9;
+        }
+
+        .section {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px 0;
+            border: 1px solid rgba(138, 43, 226, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .section h2 {
+            font-size: 2rem;
+            color: #FFD700;
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+
+        .info-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .info-card {
+            background: rgba(138, 43, 226, 0.2);
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(138, 43, 226, 0.4);
+            border-color: rgba(255, 215, 0, 0.5);
+        }
+
+        .info-card::before {
+            content: '⭐';
+            font-size: 1.5rem;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .info-card p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #fff;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .stat-box {
+            background: rgba(0, 0, 0, 0.4);
+            padding: 30px;
+            border-radius: 16px;
+            border: 2px solid rgba(0, 255, 255, 0.3);
+        }
+
+        .stat-box h3 {
+            color: #00FFFF;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .stat-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .stat-item:last-child {
+            border-bottom: none;
+        }
+
+        .stat-label {
+            color: #FFD700;
+            font-weight: 600;
+        }
+
+        .stat-value {
+            color: #fff;
+        }
+
+        .collector-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .collector-list li {
+            padding: 12px 0;
+            padding-left: 30px;
+            position: relative;
+            font-size: 1.1rem;
+        }
+
+        .collector-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #00FF00;
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, rgba(255, 20, 147, 0.2) 0%, rgba(138, 43, 226, 0.3) 100%);
+            border-radius: 20px;
+            padding: 50px;
+            margin: 40px 0;
+            text-align: center;
+            border: 2px solid rgba(255, 215, 0, 0.4);
+            box-shadow: 0 15px 50px rgba(255, 20, 147, 0.3);
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            color: #FFD700;
+            margin-bottom: 15px;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            color: #00FFFF;
+            margin-bottom: 40px;
+        }
+
+        .form-group {
+            margin: 20px 0;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            color: #FFD700;
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border-radius: 10px;
+            border: 2px solid rgba(138, 43, 226, 0.5);
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            font-size: 1rem;
+            font-family: 'Poppins', sans-serif;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #FFD700;
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+            color: #1a0b2e;
+            border: none;
+            padding: 18px 50px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.4);
+            margin-top: 20px;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(255, 215, 0, 0.6);
+        }
+
+        .submit-btn:active {
+            transform: translateY(-1px);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero {
+                padding: 30px 20px;
+            }
+
+            .section {
+                padding: 30px 20px;
+            }
+
+            .value-panel h2 {
+                font-size: 2rem;
+            }
+
+            .cta-section {
+                padding: 30px 20px;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="dots"></div>
+    <div class="container">
+        <div class="hero">
+            <div class="hero-content">
+                <h1>LOS NOOBINIS – FOR SALE</h1>
+                <div class="badge">🔒 UNOBTAINABLE ITEM</div>
+                <img src="1.png" alt="Los Noobinis png failed to load" class="hero-image">
+                <p class="subtitle">Ultra-rare Brainrot from Steal a Brainrot</p>
+            </div>
+        </div>
+
+        <div class="value-panel">
+            <h2>💰 Estimated Value: 25,000 – 35,000 Robux</h2>
+            <p>Rough USD value: $250 – $350 (hypothetical)</p>
+            <div style="margin-top: 25px; padding-top: 25px; border-top: 1px solid rgba(255, 215, 0, 0.2);">
+                <p style="color: #FF6B6B; font-size: 1.2rem; font-weight: 700;">⚠️ Approx. Stock: VERY LOW</p>
+                <p style="color: #00FFFF; margin-top: 10px;">Probably tens → low hundreds of copies total, worldwide</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🔥 Why is Los Noobinis so expensive?</h2>
+            <div class="info-cards">
+                <div class="info-card">
+                    <p><strong>Craft Machine–exclusive</strong> item (can't be obtained normally anymore)</p>
+                </div>
+                <div class="info-card">
+                    <p>Marked as <strong>Unobtainable</strong> in current game version</p>
+                </div>
+                <div class="info-card">
+                    <p><strong>Mythic-tier Brainrot</strong> with strong income generation</p>
+                </div>
+                <div class="info-card">
+                    <p><strong>Extremely low supply</strong>, high demand from collectors</p>
+                </div>
+                <div class="info-card">
+                    <p><strong>Iconic meme/status</strong> item inside the community</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📊 Details & Stats</h2>
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <h3>Item Stats</h3>
+                    <div class="stat-item">
+                        <span class="stat-label">Rarity:</span>
+                        <span class="stat-value">Mythic</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Source:</span>
+                        <span class="stat-value">Craft Machine (now removed)</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Cost to craft:</span>
+                        <span class="stat-value">$4.3M in-game cash</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Income:</span>
+                        <span class="stat-value">$12.5K per second</span>
+                    </div>
+                </div>
+
+                <div class="stat-box">
+                    <h3>Perfect for collectors who want:</h3>
+                    <ul class="collector-list">
+                        <li>Flex value and rarity</li>
+                        <li>Passive income boost</li>
+                        <li>An item almost nobody else owns</li>
+                        <li>A piece of Steal a Brainrot history</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h2>💎 Interested in buying Los Noobinis?</h2>
+            <p>I'm taking serious offers only. Contact me on Discord with your best offer.</p>
+            
+            <div style="background: rgba(0, 0, 0, 0.5); padding: 30px; border-radius: 16px; margin: 30px 0; border: 2px solid rgba(88, 101, 242, 0.5);">
+                <h3 style="color: #5865F2; font-size: 1.5rem; margin-bottom: 15px;">📱 Contact Me on Discord</h3>
+                <p style="font-size: 1.8rem; color: #FFD700; font-weight: 700; margin: 20px 0;">rebel_020</p>
+                <p style="color: #00FFFF; font-size: 1.1rem;">Send me a friend request or DM with your offer!</p>
+            </div>
+
+            <div style="margin-top: 40px; padding-top: 40px; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+                <h3 style="color: #FFD700; font-size: 1.5rem; margin-bottom: 20px;">💬 What to include in your message:</h3>
+                <ul class="collector-list" style="text-align: left; max-width: 600px; margin: 0 auto;">
+                    <li>Your Roblox username</li>
+                    <li>Your offer amount (in Robux)</li>
+                    <li>Why you want Los Noobinis</li>
+                    <li>Your payment method preference</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
